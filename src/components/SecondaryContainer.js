@@ -13,7 +13,7 @@ import MovieList from "./MovieList";
                 <MovieList title={"Popular"} movies={movies.popularMovies} />
                 <MovieList
                   title={"Upcoming Movies"}
-                  movies={movies.nowPlayingMovies}
+                  movies={movies.popularMovies}
                 />
                 <MovieList title={"Horror"} movies={movies.nowPlayingMovies} />
               </div>

@@ -59,7 +59,7 @@ const Header = () => {
           className="w-44"
           src={LOGO} alt="logo" />
            
-            <div className="flex p-2">
+         { user && ( <div className="flex p-2 ">
              {showGptSearch && (<select className="p-2 m-2 bg-gray-900 text-white"
               onChange={handleLanguageChange}> 
             {SUPPORTED_LANGUAGES.map((lang) => (
@@ -72,13 +72,14 @@ const Header = () => {
           
   <button className="py-2 px-2 mx-4 my-2 bg-purple-800 text-white rounded-lg"
       onClick={handleGptSearchClick}
-  >              {showGptSearch ? "Homepage" : "GPT Search"}</button>
+  >              {showGptSearch ? "Home" : "GPT Search"}</button>
             <img className="w-12 h-12"
           alt="user-icon"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjYA6ZG7qVVpXnqq7_5LJ_Ezs-Wr-VSQiSSA&usqp=CAU"
   />
    <button onClick={handleSignOut} className="font-bold text-white">(sign Out)</button>
         </div>
+         )}
       </div>
     );
   };
